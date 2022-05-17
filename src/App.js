@@ -9,7 +9,6 @@ function App() {
     <div>
       <SearchForm />
       <Nav />
-      <h3>{apiKey}</h3>
       <PhotoContainer />
     </div>
   );
