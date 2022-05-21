@@ -1,9 +1,20 @@
 import Photo from "./Photo";
 
-const PhotoContainer = () => (
+const PhotoContainer = (props) => (
     <div className="photo-container">
-        <h2>Results</h2>
-        <Photo />
+        <h2>{props.query}</h2>
+        <ul>
+            {
+                props.photoURLs.map( (photoURL, index) => {
+                    return (
+                        <Photo
+                            photoURL={photoURL}
+                            key={index.toString()}
+                        />
+                    );
+                })
+            }
+        </ul>
     </div>
 ); 
 
