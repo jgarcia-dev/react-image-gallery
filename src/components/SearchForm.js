@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const SearchForm = ({ getPhotos }) => {
+const SearchForm = () => {
     const userQuery = React.createRef();
+    const navigate = useNavigate();
 
     const handleQuery = (e) => {
         e.preventDefault();
-        getPhotos(userQuery.current.value);
+        navigate(`./search/${userQuery.current.value}`);
+        userQuery.current.value = '';
     }
 
     return (
