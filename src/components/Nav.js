@@ -1,4 +1,6 @@
-const Nav = ({ getPhotos }) => {
+import { NavLink } from "react-router-dom";
+
+const Nav = () => {
     const linkQuery1 = "Cats";
     const linkQuery2 = "Dogs";
     const linkQuery3 = "Computers";
@@ -6,9 +8,9 @@ const Nav = ({ getPhotos }) => {
     return (
     <nav className="main-nav">
         <ul>
-            <li><a href="#" onClick={ () => getPhotos(linkQuery1) }>{linkQuery1}</a></li>
-            <li><a href="#" onClick={ () => getPhotos(linkQuery2) }>{linkQuery2}</a></li>
-            <li><a href="#" onClick={ () => getPhotos(linkQuery3) }>{linkQuery3}</a></li>
+            <li><NavLink to={`/${linkQuery1}`} >{linkQuery1}</NavLink></li>
+            <li><NavLink to={`/${linkQuery2}`} >{linkQuery2}</NavLink></li>
+            <li><NavLink to={`/${linkQuery3}`} >{linkQuery3}</NavLink></li>
         </ul>
     </nav>
     )
