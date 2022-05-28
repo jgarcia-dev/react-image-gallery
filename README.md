@@ -1,3 +1,14 @@
+# React Image Gallery App
+
+Single page application that retrieves images from the Flickr API based on a users input or three predetermined navigation links.
+App created using create-react-app.
+
+Special Notes:
+- A config.js file with a Flickr API key is needed in the src directory to successfully make API requests and run app. 
+- React Router v6 is used.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
